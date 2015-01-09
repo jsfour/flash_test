@@ -6,7 +6,9 @@ Flash test is a helpful gem to help test the flash hash in rails.
 
 Add this line to your application's Gemfile:
 
+  group :development do
     gem 'flash_test', git: 'https://github.com/jsmootiv/flash_test.git'
+  end
 
 And then execute:
 
@@ -18,12 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-Include flash test in your application controller to have test flashes show up.
+Include flash test in your ApplicationController to send a message through all of the flash hashes.
+
 ```
 class ApplicationController < ActionController::Base
   include FlashTest
 
 end
+```
 
 
 ## Contributing
